@@ -59,6 +59,6 @@ export default {
     javascriptEnabled: true,
   },
   // disableDynamicImport: false,
-  publicPath: '/',
+  publicPath: '/BrowserExportExcel',
   hash: true,
 };
