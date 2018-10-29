@@ -10,7 +10,9 @@ import './index.less';
 
 // 1. Initialize
 const app = dva({
-  history: createHistory(),
+  history: createHistory({
+    basename: 'BrowserExportExcel',
+  }),
 });
 
 app.router(require('./router').default);
