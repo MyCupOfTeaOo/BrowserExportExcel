@@ -1,0 +1,198 @@
+@import '~antd/lib/style/themes/default.less';
+
+html,
+body,
+:global(#root) {
+  height: 100%;
+}
+
+:global(.ant-layout) {
+  min-height: 100%;
+}
+
+canvas {
+  display: block;
+}
+
+body {
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.globalSpin {
+  width: 100%;
+  margin: 40px 0 !important;
+}
+
+// temp fix for https://github.com/ant-design/ant-design/commit/a1fafb5b727b62cb0be29ce6e9eca8f579d4f8b7
+:global {
+  .bf-content {
+    height: 200px !important;
+  }
+
+  .ant-upload-list-picture-card .ant-upload-list-item-info:hover + .ant-upload-list-item-actions,
+  .ant-upload-list-picture-card .ant-upload-list-item-actions:hover {
+    opacity: 1;
+    & > a {
+      opacity: 1;
+    }
+  }
+
+  .ant-upload-list-picture .ant-upload-list-item:hover,
+  .ant-upload-list-picture-card {
+    .ant-upload-list-item-actions {
+      opacity: 1 !important;
+      & > .anticon-delete {
+        position: absolute;
+        right: -55px;
+        top: -53px;
+        color: rgba(0, 0, 0, 0) !important;
+        background: #f00;
+        border-radius: 50%;
+        width: 25px !important;
+        height: 25px;
+        &::after {
+          content: '×';
+          font-size: 25px;
+          display: block;
+          margin-top: -7px;
+          color: #fff;
+        }
+      }
+      & > a {
+        opacity: 0;
+      }
+      &:hover {
+        opacity: 1;
+        & > a {
+          opacity: 1;
+        }
+      }
+    }
+  }
+  .ant-spin-container {
+    overflow: visible !important;
+  }
+  .ant-form-item-with-help {
+    margin-bottom: 0 !important;
+  }
+  .ant-collapse-header {
+    background-color: #90a4ae;
+    .arrow {
+      line-height: 32px !important;
+    }
+  }
+  .ant-form-inline {
+    .ant-form-item {
+      .ant-form-item-label {
+        display: inline-flex !important;
+      }
+    }
+  }
+  .ant-form-item {
+    .ant-form-item-label {
+      vertical-align: middle;
+      min-height: 40px;
+      display: inline-flex;
+      justify-content: flex-end;
+      align-items: center;
+      overflow: hidden;
+      white-space: nowrap;
+      & > label {
+        display: inline-flex;
+        align-items: center;
+        white-space: normal;
+        font-weight: bold;
+        line-height: 1.2;
+        &::after {
+          display: inline-block;
+        }
+      }
+    }
+  }
+
+  .ant-collapse-content-box {
+    padding-top: 20px !important;
+    border: 1px solid #e8e8e8;
+  }
+  .ant-btn > .anticon + span,
+  .ant-btn > span + .anticon {
+    margin-left: 4px !important;
+  }
+  .ant-timeline {
+    padding: 8px !important;
+  }
+  .ant-select-selection__clear-icon {
+    border: 1px @volcano-5 solid;
+    border-radius: 50%;
+    display: inline-block;
+    height: 15px;
+    color: @volcano-5;
+    width: 15px;
+  }
+  .ant-upload-list-item .anticon-close {
+    color: @volcano-5 !important;
+    font-size: 20px !important;
+    margin-top: -5px;
+  }
+  .bf-container.disabled {
+    filter: none !important;
+    opacity: 1 !important;
+  }
+  .ReactTable {
+    .rt-thead {
+      .rt-th {
+        border-right: 1px dashed #ccc !important;
+        color: #333;
+      }
+    }
+    .rt-tr {
+      align-items: center;
+    }
+    .rt-tbody {
+      .rt-tr-group {
+        border: none !important;
+      }
+
+      .rt-td {
+        border-right: 1px dashed #ccc !important;
+        border-bottom: 1px dashed #ccc;
+        padding: 0 5px;
+        display: block;
+        align-items: center;
+        line-height: 33px;
+        height: 33px;
+        & > :global(.ant-row-flex) {
+          align-items: center;
+        }
+      }
+    }
+    &.-striped .rt-tr.-odd {
+      background: rgba(0, 0, 0, 0.06) !important;
+    }
+    .rt-resizer {
+      width: 16px !important;
+    }
+  }
+
+  .ant-layout {
+    .ant-btn,
+    .ant-btn-primary {
+      color: #444;
+      border: 1px solid #bbb;
+      background: linear-gradient(to bottom, #fff 0, #e6e6e6 100%);
+      &:hover {
+        background: #e6e6e6 !important;
+        color: #00438a !important;
+        border: 1px solid #ddd !important;
+        filter: none;
+      }
+      &:focus {
+        color: #444;
+        border: 1px solid #bbb;
+        background: linear-gradient(to bottom, #fff 0, #e6e6e6 100%);
+      }
+    }
+  }
+}

@@ -1,0 +1,113 @@
+.tableListForm {
+  :global {
+    .ant-table-body {
+      min-height: calc(~'100vh - 450px');
+    }
+    .ant-card-body {
+      .ant-collapse-content-box {
+        border: none;
+      }
+    }
+    .ant-form-item {
+      margin-bottom: 6px;
+      margin-right: 0;
+      width: 100%;
+      > .ant-form-item-label {
+        padding-right: 8px;
+      }
+    }
+  }
+  .submitButtons {
+    display: flex;
+    justify-content: center;
+    white-space: nowrap;
+  }
+}
+.longText {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 200px;
+  display: inline-block;
+}
+.PaginationLeft {
+  padding: 20px;
+  float: right;
+}
+.spanC {
+  color: red;
+}
+.inputC {
+  width: 86%;
+}
+
+.dot {
+  & > span {
+    padding: 0 0 0 5px;
+  }
+}
+
+.draftDot {
+  :global(.ant-badge-status-dot) {
+    background-color: #000;
+  }
+}
+.successDot {
+  :global(.ant-badge-status-dot) {
+    background-color: #008000;
+  }
+}
+.darkblueDot {
+  :global(.ant-badge-status-dot) {
+    background-color: rgb(0, 0, 146);
+  }
+}
+.waitApproval {
+  :global(.ant-badge-status-dot) {
+    background-color: #00f;
+  }
+}
+.approvalReject {
+  :global(.ant-badge-status-dot) {
+    background-color: #f00;
+  }
+}
+.rejectDot {
+  :global(.ant-badge-status-dot) {
+    background-color: #8c8c8c;
+  }
+}
+
+.searchButtonArea {
+  margin: 8px 0 0 0;
+  display: flex;
+  justify-content: center;
+  & > :global(.ant-btn) {
+    margin-left: 9px;
+    margin-right: 9px;
+  }
+}
+
+.operateButtonArea {
+  line-height: 33px;
+  & > :global(.ant-btn) {
+    margin-left: 9px;
+    margin-right: 9px;
+  }
+}
+
+.selectList {
+  :global {
+    .ant-modal-body {
+      height: 650px;
+      overflow: auto;
+    }
+  }
+}
+.collapseNonePadding {
+  :global {
+    .ant-collapse-content-box {
+      padding: 0 !important;
+    }
+  }
+}
