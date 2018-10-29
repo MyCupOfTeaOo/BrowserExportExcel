@@ -68,17 +68,19 @@ function analysisColumns(columns) {
   const allMerge = [];
   //   const mergeCell = [];
   const depth = Math.max(...columns.map(element => getDepth(1, element)));
-  const breadths = columns.map(element => getLeafNodeNum(element));
+  const LeafNodeNumList = columns.map(element => getLeafNodeNum(element));
   const cols = [];
   columns.forEach((colObj, colIndex) =>
     getEveryColumns(
       cols,
       [''],
       colObj,
-      breadths,
+      LeafNodeNumList,
       depth,
       allMerge,
-      [...Array(colIndex)].map((_, index) => breadths[index]).reduce((acc, cur) => acc + cur, 0),
+      [...Array(colIndex)]
+        .map((_, index) => LeafNodeNumList[index])
+        .reduce((acc, cur) => acc + cur, 0),
       1,
       1
     )
@@ -105,7 +107,7 @@ function getEveryColumns(
   cols,
   header,
   colObj,
-  breadths,
+  LeafNodeNumList,
   depth,
   allMerge,
   forwardLeft,
@@ -131,7 +133,7 @@ function getEveryColumns(
         cols,
         newHeader,
         element,
-        breadths,
+        LeafNodeNumList,
         depth,
         allMerge,
         [...Array(index)]
