@@ -2,6 +2,8 @@
 
 基于 exceljs
 
+*demo* https://tz310200.github.io/BrowserExportExcel/
+
 ---
 
 ## 项目运行与构建(start)

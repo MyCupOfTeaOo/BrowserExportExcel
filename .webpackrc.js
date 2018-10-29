@@ -37,6 +37,7 @@ export default {
   env: {
     development: {
       extraBabelPlugins: ['dva-hmr'],
+      publicPath: '/',
     },
   },
   externals: {
