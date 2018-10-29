@@ -423,7 +423,16 @@ export default class FourSkillContractStatistics extends React.PureComponent {
                     title: '四种水果销售额',
                     sheetName: '四种水果销售额统计',
                     columns: this.state.columnDefs.filter((_, index) => index),
-                    rows: dataList.concat(bottomData),
+                    rows: dataList
+                      .map(item => ({
+                        ...item,
+                        FRUITSAMT01: Number(item.FRUITSAMT01),
+                        FRUITSAMT02: Number(item.FRUITSAMT02),
+                        FRUITSAMT03: Number(item.FRUITSAMT03),
+                        FRUITSAMT04: Number(item.FRUITSAMT04),
+                        FRUITSAMT: Number(item.FRUITSAMT),
+                      }))
+                      .concat(bottomData),
                     filename: '四种水果销售额统计.xlsx',
                   })
                 }
