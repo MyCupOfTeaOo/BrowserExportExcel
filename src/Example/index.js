@@ -192,15 +192,15 @@ const dataList = [
 const bottomData = [
   {
     FRUITSNUM01: 4318,
-    FRUITSAMT01: 467855313.53999996,
+    FRUITSAMT01: 467855313.54,
     FRUITSNUM02: 379,
     FRUITSAMT02: 1365889354.58,
     FRUITSNUM03: 297,
     FRUITSAMT03: 12372147313.47,
     FRUITSNUM04: 2828,
-    FRUITSAMT04: 475027.29000000004,
+    FRUITSAMT04: 475027.29,
     FRUITSNUM: 7827,
-    FRUITSAMT: 14206367008.890001,
+    FRUITSAMT: 14206367008.89,
     FRUITS_ADMDIV_VALUE: '总计',
   },
 ];
@@ -423,16 +423,7 @@ export default class FourSkillContractStatistics extends React.PureComponent {
                     title: '四种水果销售额',
                     sheetName: '四种水果销售额统计',
                     columns: this.state.columnDefs.filter((_, index) => index),
-                    rows: dataList
-                      .map(item => ({
-                        ...item,
-                        FRUITSAMT01: Number(item.FRUITSAMT01),
-                        FRUITSAMT02: Number(item.FRUITSAMT02),
-                        FRUITSAMT03: Number(item.FRUITSAMT03),
-                        FRUITSAMT04: Number(item.FRUITSAMT04),
-                        FRUITSAMT: Number(item.FRUITSAMT),
-                      }))
-                      .concat(bottomData),
+                    rows: dataList.concat(bottomData),
                     filename: '四种水果销售额统计.xlsx',
                   })
                 }
